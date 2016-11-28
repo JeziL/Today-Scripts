@@ -111,8 +111,18 @@
     // If the interpreter is not a valid executable file, style the text to
     // indicate the error to the user, then abort.
     NSString *programString = self.programField.string;
-    if (! [NSFileManager.defaultManager isExecutableFileAtPath:programString]) {
-        self.programField.textColor = [NSColor colorWithRed:1.0 green:0.2 blue:0.2 alpha:1.0];
+    BOOL isDirectory = NO;
+    if ([NSFileManager.defaultManager fileExistsAtPath:programString isDirectory:&isDirectory]) {
+        if (!isDirectory) {
+            self.programField.textColor = [NSColor colorWithRed:0.247058824 green:0.247058824 blue:0.247058824 alpha:1];
+        }
+        else {
+            self.programField.textColor = [NSColor colorWithRed:1.0 green:0.5 blue:0.5 alpha:1.0];
+            return;
+        }
+    }
+    else {
+        self.programField.textColor = [NSColor colorWithRed:1.0 green:0.5 blue:0.5 alpha:1.0];
         return;
     }
 
@@ -228,13 +238,21 @@
 
     // When the user starts editing the program field, make sure the text color
     // returns to normal in case it was previously changed to indicate an error.
-    if ([NSFileManager.defaultManager isExecutableFileAtPath:self.string])
-        self.textColor = [NSColor colorWithRed:0.247058824 green:0.247058824 blue:0.247058824 alpha:1];
+    BOOL isDirectory = NO;
+    if ([NSFileManager.defaultManager fileExistsAtPath:self.string isDirectory:&isDirectory]) {
+        if (!isDirectory) {
+            self.textColor = [NSColor colorWithRed:0.247058824 green:0.247058824 blue:0.247058824 alpha:1];
+        }
+        else {
+            self.textColor = [NSColor colorWithRed:1.0 green:0.5 blue:0.5 alpha:1.0];
+        }
+    }
 
     // If user enters an invalid program in the program field, set its text as
     // red to indicate this.
-    else
+    else {
         self.textColor = [NSColor colorWithRed:1.0 green:0.5 blue:0.5 alpha:1.0];
+    }
 }
 
 - (void)keyDown:(NSEvent *)theEvent
