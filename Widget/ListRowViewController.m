@@ -24,7 +24,7 @@
     // Make the text cursor for the output view (mostly) invisible.
     self.outputView.insertionPointColor = NSColor.clearColor;
     // Make the edit button dim.
-    self.editButton.alphaValue = 0.1;
+    self.editButton.alphaValue = 1;
 
     // Give the list view a moment to display the content, then reset the focus.
     dispatch_time_t delay = dispatch_time(DISPATCH_TIME_NOW, 250 * NSEC_PER_MSEC);
@@ -65,7 +65,7 @@
 - (void)setTitle:(NSString *)title
 {
     super.attributedTitle = [[NSAttributedString alloc] initWithString:title attributes:@{
-        NSForegroundColorAttributeName: NSColor.labelColor,
+        NSForegroundColorAttributeName: [NSColor colorWithRed:0.247058824 green: 0.247058824 blue:0.247058824 alpha:1],
         NSFontAttributeName:  [NSFont boldSystemFontOfSize:11]
     }];
 }

@@ -304,7 +304,7 @@ NSCharacterSet *lineBreaks;
         [NSColor colorWithRed:RED green:GREEN blue:BLUE alpha:ALPHA]
 
     // Define the standard text colors to use.
-    SET_AMR_SGRCode( FgBlack,         0.31764706, 0.31764706, 0.31764706, 1.0 );
+    SET_AMR_SGRCode( FgBlack,         0.48627451, 0.48627451, 0.48627451, 1.0 );
     SET_AMR_SGRCode( FgRed,           0.94901961, 0.46666667, 0.47843137, 1.0 );
     SET_AMR_SGRCode( FgGreen,         0.60000000, 0.80000000, 0.60000000, 1.0 );
     SET_AMR_SGRCode( FgYellow,        1.00000000, 0.80000000, 0.40000000, 1.0 );
@@ -313,7 +313,7 @@ NSCharacterSet *lineBreaks;
     SET_AMR_SGRCode( FgCyan,          0.40000000, 0.80000000, 0.80000000, 1.0 );
     SET_AMR_SGRCode( FgWhite,         0.80000000, 0.80000000, 0.80000000, 1.0 );
     // Background colors are the same as the text colors, but with half opacity.
-    SET_AMR_SGRCode( BgBlack,         0.31764706, 0.31764706, 0.31764706, 0.5 );
+    SET_AMR_SGRCode( BgBlack,         0.48627451, 0.48627451, 0.48627451, 0.5 );
     SET_AMR_SGRCode( BgRed,           0.94901961, 0.46666667, 0.47843137, 0.5 );
     SET_AMR_SGRCode( BgGreen,         0.60000000, 0.80000000, 0.60000000, 0.5 );
     SET_AMR_SGRCode( BgYellow,        1.00000000, 0.80000000, 0.40000000, 0.5 );
@@ -322,7 +322,7 @@ NSCharacterSet *lineBreaks;
     SET_AMR_SGRCode( BgCyan,          0.40000000, 0.80000000, 0.80000000, 0.5 );
     SET_AMR_SGRCode( BgWhite,         0.80000000, 0.80000000, 0.80000000, 0.5 );
     // Bright text colors are more vivid than normal text colors.
-    SET_AMR_SGRCode( FgBrightBlack,   0.00000000, 0.00000000, 0.00000000, 1.0 );
+    SET_AMR_SGRCode( FgBrightBlack,   0.247058824, 0.247058824, 0.247058824, 1.0 );
     SET_AMR_SGRCode( FgBrightRed,     0.86666667, 0.40000000, 0.40000000, 1.0 );
     SET_AMR_SGRCode( FgBrightGreen,   0.72941176, 0.77254902, 0.36470588, 1.0 );
     SET_AMR_SGRCode( FgBrightYellow,  0.92156863, 0.80392157, 0.38039216, 1.0 );
@@ -331,7 +331,7 @@ NSCharacterSet *lineBreaks;
     SET_AMR_SGRCode( FgBrightCyan,    0.51372549, 0.79215686, 0.74901961, 1.0 );
     SET_AMR_SGRCode( FgBrightWhite,   1.00000000, 1.00000000, 1.00000000, 1.0 );
     // Bright backgrounds are the same as bright text, but with half opacity.
-    SET_AMR_SGRCode( BgBrightBlack,   0.00000000, 0.00000000, 0.00000000, 0.5 );
+    SET_AMR_SGRCode( BgBrightBlack,   0.247058824, 0.247058824, 0.247058824, 0.5 );
     SET_AMR_SGRCode( BgBrightRed,     0.86666667, 0.40000000, 0.40000000, 0.5 );
     SET_AMR_SGRCode( BgBrightGreen,   0.72941176, 0.77254902, 0.36470588, 0.5 );
     SET_AMR_SGRCode( BgBrightYellow,  0.92156863, 0.80392157, 0.38039216, 0.5 );
@@ -342,7 +342,7 @@ NSCharacterSet *lineBreaks;
 
     // Default text color is our non-bright white.
     ANSIHelper.ansiColors[ @(AMR_SGRCodeFgReset) ] = ANSIHelper.defaultStringColor =
-        ANSIHelper.ansiColors[ @(AMR_SGRCodeFgWhite) ];
+    ANSIHelper.ansiColors[ @(AMR_SGRCodeFgBlack) ];
 
     // Default background is transparent.
     ANSIHelper.ansiColors[@( AMR_SGRCodeBgReset )] = NSColor.clearColor;

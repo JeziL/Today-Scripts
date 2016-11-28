@@ -14,23 +14,26 @@
 @implementation EditViewController
 {
     TodayScript *script;
+    NSColor *textColor;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    textColor = [NSColor colorWithRed:0.247058824 green:0.247058824 blue:0.247058824 alpha:1];
 
     self.labelField.backgroundColor = NSColor.clearColor;
     self.programField.backgroundColor = NSColor.clearColor;
     self.scriptField.backgroundColor = NSColor.clearColor;
 
-    self.labelField.textColor = NSColor.labelColor;
-    self.programField.textColor = NSColor.labelColor;
-    self.scriptField.textColor = NSColor.labelColor;
+    self.labelField.textColor = textColor;
+    self.programField.textColor = textColor;
+    self.scriptField.textColor = textColor;
 
-    self.labelField.insertionPointColor = NSColor.labelColor;
-    self.programField.insertionPointColor = NSColor.labelColor;
-    self.scriptField.insertionPointColor = NSColor.labelColor;
+    self.labelField.insertionPointColor = textColor;
+    self.programField.insertionPointColor = textColor;
+    self.scriptField.insertionPointColor = textColor;
 
     self.labelField.font = [NSFont boldSystemFontOfSize:11];
     self.programField.font = [NSFont boldSystemFontOfSize:11];
@@ -41,7 +44,7 @@
     self.scriptField.textContainerInset = NSMakeSize(0, 2);
 
     NSDictionary *buttonAttributes = @{
-        NSForegroundColorAttributeName: NSColor.labelColor,
+        NSForegroundColorAttributeName: textColor,
         NSFontAttributeName: [NSFont systemFontOfSize:11]
     };
     self.autoRunButton.attributedTitle = [[NSAttributedString alloc]
@@ -65,7 +68,7 @@
     // Show ourselves in the widget.
     [todayViewController presentViewControllerInWidget:self];
     // Set the button's title to designate that we are editing a script.
-    self.saveButton.title = @"Save Script";
+    self.saveButton.title = @"Save";
 
     // Set our script variable to the script passed to us.
     script = existingScript;
@@ -89,7 +92,7 @@
     // Show ourselves in the widget.
     [todayViewController presentViewControllerInWidget:self];
     // Set the button's title to designate that we are creating a script.
-    self.saveButton.title = @"Add Script";
+    self.saveButton.title = @"Add";
 
     // Set up our fields with the default values.
     self.labelField.string = @"";
@@ -365,5 +368,6 @@
     else
         [super keyDown:theEvent];
 }
+
 
 @end

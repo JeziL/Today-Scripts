@@ -40,6 +40,7 @@
                             <textView importsGraphics="NO" richText="NO" fieldEditor="YES" continuousSpellChecking="YES" allowsUndo="YES" spellingCorrection="YES" smartInsertDelete="YES" id="jcz-m0-yi0" userLabel="Label View" customClass="EditViewLabelField">
                                 <rect key="frame" x="0.0" y="0.0" width="188" height="17"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="minSize" width="188" height="17"/>
                                 <size key="maxSize" width="463" height="10000000"/>
@@ -58,7 +59,7 @@
                         <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="PIL-n2-Ehd">
+                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="PIL-n2-Ehd" customClass="RFOverlayScroller">
                         <rect key="frame" x="189" y="1" width="15" height="17"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
@@ -80,6 +81,7 @@
                             <textView importsGraphics="NO" richText="NO" fieldEditor="YES" continuousSpellChecking="YES" allowsUndo="YES" spellingCorrection="YES" smartInsertDelete="YES" id="m0T-Wm-kFz" userLabel="Program View" customClass="EditViewProgramField">
                                 <rect key="frame" x="0.0" y="0.0" width="188" height="17"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="minSize" width="188" height="17"/>
                                 <size key="maxSize" width="463" height="10000000"/>
@@ -98,7 +100,7 @@
                         <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="L0a-xy-L5Y">
+                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="L0a-xy-L5Y" customClass="RFOverlayScroller">
                         <rect key="frame" x="189" y="1" width="15" height="17"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
@@ -122,7 +124,6 @@
                                 </connections>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </clipView>
                     <constraints>
                         <constraint firstAttribute="height" constant="128" id="qzD-ga-hai"/>
@@ -131,7 +132,7 @@
                         <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>
-                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="zBW-qB-PIF">
+                    <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="zBW-qB-PIF" customClass="RFOverlayScroller">
                         <rect key="frame" x="244" y="1" width="15" height="126"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </scroller>

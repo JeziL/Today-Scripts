@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A5D280A1DEBCCB1003AF393 /* RFOverlayScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5D28071DEBCCB1003AF393 /* RFOverlayScroller.m */; };
+		0A5D280B1DEBCCB1003AF393 /* RFOverlayScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5D28091DEBCCB1003AF393 /* RFOverlayScrollView.m */; };
 		223F9A0A19F894AF000802FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 223F9A0919F894AF000802FB /* AppDelegate.m */; };
 		223F9A0C19F894AF000802FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 223F9A0B19F894AF000802FB /* main.m */; };
 		223F9A2D19F894DB000802FB /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 223F9A2C19F894DB000802FB /* NotificationCenter.framework */; };
@@ -90,6 +92,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A5D28061DEBCCB1003AF393 /* RFOverlayScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFOverlayScroller.h; sourceTree = "<group>"; };
+		0A5D28071DEBCCB1003AF393 /* RFOverlayScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFOverlayScroller.m; sourceTree = "<group>"; };
+		0A5D28081DEBCCB1003AF393 /* RFOverlayScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RFOverlayScrollView.h; sourceTree = "<group>"; };
+		0A5D28091DEBCCB1003AF393 /* RFOverlayScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RFOverlayScrollView.m; sourceTree = "<group>"; };
 		22211C9F1A0317EB000802FB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		223F9A0319F894AE000802FB /* Today Scripts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Today Scripts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		223F9A0719F894AF000802FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -154,6 +160,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A5D28051DEBCCB1003AF393 /* RFOverlayScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				0A5D28061DEBCCB1003AF393 /* RFOverlayScroller.h */,
+				0A5D28071DEBCCB1003AF393 /* RFOverlayScroller.m */,
+				0A5D28081DEBCCB1003AF393 /* RFOverlayScrollView.h */,
+				0A5D28091DEBCCB1003AF393 /* RFOverlayScrollView.m */,
+			);
+			path = RFOverlayScrollView;
+			sourceTree = "<group>";
+		};
 		223F99FA19F894AE000802FB = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +239,7 @@
 				223F9A6419F8963C000802FB /* EditViewController.h */,
 				223F9A6519F8963C000802FB /* EditViewController.m */,
 				223F9A6619F8963C000802FB /* EditViewController.xib */,
+				0A5D28051DEBCCB1003AF393 /* RFOverlayScrollView */,
 				2265B37919FC539E000802FB /* AMR_ANSIEscapeHelper */,
 				223F9A2F19F894DB000802FB /* Supporting Files */,
 			);
@@ -427,7 +445,9 @@
 			files = (
 				223F9A7219F8963C000802FB /* TodayViewController.m in Sources */,
 				223F9A6C19F8963C000802FB /* AMR_ANSIEscapeHelper.m in Sources */,
+				0A5D280A1DEBCCB1003AF393 /* RFOverlayScroller.m in Sources */,
 				223F9A5D19F895AF000802FB /* TodayScripts.m in Sources */,
+				0A5D280B1DEBCCB1003AF393 /* RFOverlayScrollView.m in Sources */,
 				223F9A6D19F8963C000802FB /* ListRowViewController.m in Sources */,
 				223F9A6F19F8963C000802FB /* EditViewController.m in Sources */,
 				223F9A7119F8963C000802FB /* TodayScript.m in Sources */,

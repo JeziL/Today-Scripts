@@ -35,7 +35,6 @@
 @property IBOutlet EditViewController *editViewController;
 @end
 
-
 @interface EditViewController : NCWidgetListViewController
 
 - (void)editScript:(TodayScript *)script;
