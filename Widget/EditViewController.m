@@ -173,6 +173,11 @@
 
 @implementation EditViewLabelField
 
+- (void)mouseDown:(NSEvent *)event {
+    [self.window makeFirstResponder:self.editViewController.labelField];
+    [super mouseDown:event];
+}
+
 - (void)keyDown:(NSEvent *)theEvent
 {
     // Get the character that was typed.
@@ -211,6 +216,11 @@
 
 
 @implementation EditViewProgramField
+
+- (void)mouseDown:(NSEvent *)event {
+    [self.window makeFirstResponder:self.editViewController.programField];
+    [super mouseDown:event];
+}
 
 - (void)didChangeText
 {
@@ -256,6 +266,11 @@
 
 
 @implementation EditViewScriptView
+
+- (void)mouseDown:(NSEvent *)event {
+    [self.window makeFirstResponder:self.editViewController.scriptField];
+    [super mouseDown:event];
+}
 
 - (void)keyDown:(NSEvent *)theEvent
 {
