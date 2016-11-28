@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Sam Rothenberg. All rights reserved.
 //
 
-#import "TodayScripts.h"
 #import "XPCMain.h"
 #include <util.h>
 
