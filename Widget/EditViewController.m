@@ -229,7 +229,7 @@
     // When the user starts editing the program field, make sure the text color
     // returns to normal in case it was previously changed to indicate an error.
     if ([NSFileManager.defaultManager isExecutableFileAtPath:self.string])
-        self.textColor = NSColor.labelColor;
+        self.textColor = [NSColor colorWithRed:0.247058824 green:0.247058824 blue:0.247058824 alpha:1];;
 
     // If user enters an invalid program in the program field, set its text as
     // red to indicate this.
